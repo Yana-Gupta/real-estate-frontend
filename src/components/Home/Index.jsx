@@ -22,19 +22,19 @@ import './Index.scss';
 const propertyOptions = [
   {
     type: 'All Residentials',
-    icon: <BorderAllIcon />
+    icon: <BorderAllIcon style={{color:'#443D66'}}/>
   },
   {
     type: 'Home',
-    icon: <HouseIcon />
+    icon: <HouseIcon style={{color:'#443D66'}}/>
   },
   {
     type: 'Apartment',
-    icon: <ApartmentIcon />
+    icon: <ApartmentIcon style={{color:'#443D66'}}/>
   },
   {
     type: 'Building',
-    icon: <LocationCityIcon />
+    icon: <LocationCityIcon style={{color:'#443D66'}}/>
   },
 
 ];
@@ -55,6 +55,7 @@ function Home() {
 
   async function handleChange(event) {
     setOption(event.target.value);
+    console.log(option)
   };
 
   return (
@@ -110,7 +111,8 @@ function Home() {
             sx={{
               width: `${optionArea}%`,
               outline: 'none',
-              height: '56px'
+              height: '56px',
+              padding: 'auto'
             }} >
             {{ propertyOptions } && propertyOptions.map((option) => {
               return (
@@ -121,7 +123,10 @@ function Home() {
                       {option.type}
                     </Typography>}
                   {showDown780px &&
-                    option.icon
+                    <Typography>
+                      {option.icon}
+
+                    </Typography>
                   }
                 </MenuItem>
 
@@ -143,9 +148,10 @@ function Home() {
               borderBottomRightRadius: '20px',
               borderTopLeftRadius: '0px',
               borderBottomLeftRadius: '0px',
-              width: '13%',
+              width: '14%',
               border: 'none',
               margin: '0px',
+              padding: 'auto 10px',
               borderTopRightRadius: '0px'
             }} >
             Search
@@ -166,7 +172,7 @@ function Home() {
           <Typography
             variant='h3'
             align='center'>
-            Houses
+            Lorem
           </Typography>
         </Container>
         <Container

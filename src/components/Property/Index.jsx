@@ -20,7 +20,10 @@ function Property() {
                         borderRadius: '5px',
                         border: '1px solid #fffff',
                         margin: '8px 0px 20px 0px',
-                        padding: '10px 0px 20px 0px'
+                        padding: '10px 0px 20px 0px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
                     }}
                 >
 
@@ -34,7 +37,7 @@ function Property() {
                             color: '#002B3D',
                             borderRadius: "30px",
                             borderBottom: '10px solid #290000',
-                            padding: '6px auto',
+                            padding: '6px 30px',
                         }}
                         fullWidth >
                         Houses
@@ -49,7 +52,10 @@ function Property() {
                         borderRadius: '5px',
                         border: '1px solid #D3DEEE',
                         margin: '40px auto',
-                        padding: '10px 0px 20px 0px'
+                        padding: '10px 0px 20px 0px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
                     }}
                 >
                     <Typography
@@ -64,6 +70,7 @@ function Property() {
                             color: '#002B3D',
                             borderRadius: "30px",
                             borderBottom: '10px solid #290000',
+                            padding: '6px 30px'
                         }}>
                         Apartments
                     </Typography>
@@ -78,6 +85,9 @@ function Property() {
                         border: '1px solid #fffff',
                         margin: '40px 0px',
                         padding: '10px 0px 20px 0px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
                     }}>
 
                     <Typography
@@ -90,7 +100,7 @@ function Property() {
                             borderRadius: "30px",
                             margin: '0px 20px 20px 20px',
                             borderBottom: '10px solid #290000',
-                            padding: '6px 0px',
+                            padding: '6px 30px',
                         }}
                         fullWidth >
                         Lands
@@ -106,6 +116,9 @@ function Property() {
                         border: '1px solid #fffff',
                         margin: '40px 0px',
                         padding: '10px 0px 20px 0px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
                     }}>
 
                     <Typography
@@ -118,7 +131,7 @@ function Property() {
                             borderRadius: "30px",
                             margin: '0px 20px 20px 20px',
                             borderBottom: '10px solid #290000',
-                            padding: '6px 0px',
+                            padding: '6px 30px',
                         }}
                         fullWidth >
                         Buildings
