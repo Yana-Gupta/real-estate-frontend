@@ -22,7 +22,7 @@ import './Index.scss';
 const propertyOptions = [
   {
     type: 'All Residentials',
-    icon: <BorderAllIcon/>
+    icon: <BorderAllIcon />
   },
   {
     type: 'Home',
@@ -46,12 +46,14 @@ const userInterest = [
 ]
 
 function Home() {
-  const showDown780 = useMediaQuery('(min-Width: 780px)')
+  const showUP780 = useMediaQuery('(min-Width: 780px)');
+  const showDown780px = useMediaQuery('(max-width: 780px)');
+
 
   const optionArea = '40';
   const [option, setOption] = useState('All Residentials');
 
-  const handleChange = (event) => {
+  async function handleChange(event) {
     setOption(event.target.value);
   };
 
@@ -99,6 +101,7 @@ function Home() {
           sx={{
             width: '100%',
             display: 'flex',
+            height: '56px'
           }}>
           <TextField
             select
@@ -107,13 +110,21 @@ function Home() {
             sx={{
               width: `${optionArea}%`,
               outline: 'none',
+              height: '56px'
             }} >
             {{ propertyOptions } && propertyOptions.map((option) => {
               return (
 
                 <MenuItem key={option.type} value={option.type}>
-                  {option.type}
+                  {showUP780 &&
+                    <Typography>
+                      {option.type}
+                    </Typography>}
+                  {showDown780px &&
+                    option.icon
+                  }
                 </MenuItem>
+
               )
             })}
           </TextField>
@@ -121,7 +132,8 @@ function Home() {
             variant="filled"
             label={<SearchRounded />}
             sx={{
-              alignContent: 'start'
+              alignContent: 'start',
+              height: '56px'
             }}
             fullWidth
           />
