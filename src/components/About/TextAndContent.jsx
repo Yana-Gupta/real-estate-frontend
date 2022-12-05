@@ -1,0 +1,34 @@
+import {
+  Box,
+  Grid,
+  Typography
+} from '@mui/material';
+import React from 'react';
+
+
+function TextAndContent(props) {
+
+  const { Content } = props;
+  return (
+    <div>
+      <Box maxWidth={'lg'}>
+        {{ Content } && Content.map((item) => {
+          return (
+            <Grid container key={item.cont} marginBottom={'20px'}>
+              <Grid item key={item.cont} md={12} lg={6} >
+                <Typography align='justify' fontSize={'19px'}>
+                  {item.cont}
+                </Typography>
+              </Grid>
+              <Grid style={{ margin: 'auto' }} alignItems='center' item md={12} lg={6} >
+                <img style={{ width: '72%', margin: '0px auto', }} src={item.img} alt="" />
+              </Grid>
+            </Grid>
+          )
+        })}
+      </Box>
+    </div>
+  )
+}
+
+export default TextAndContent;

@@ -1,0 +1,193 @@
+import { useState } from 'react';
+import { Container } from '@mui/system';
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Typography,
+  useMediaQuery,
+  Button,
+  Link,
+} from '@mui/material';
+import "./Index.scss";
+
+
+export default function Navbar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const showUpMd = useMediaQuery('(min-Width: 701px)');
+  const showDownMd = useMediaQuery('(max-Width: 700px)');
+
+  async function handleClick() {
+    await setNavbarOpen((!navbarOpen));
+    // console.log(navbarOpen);
+  }
+
+  return (
+    <div className='nav-bar'>
+      <AppBar
+        position='absolute'
+        sx={{
+          backgroundColor: '#222B59',
+          width: '100%',
+          position: 'fixed',
+        }}
+        className={navbarOpen ? 'nav-bar-open' : ''}
+      >
+        <Container
+          maxWidth='lg'
+          sx={{
+            color: 'bisque',
+            padding: '0px 20px',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+          className={navbarOpen ? 'nav-bar-container' : ''}
+          disableGutters>
+
+          {(navbarOpen || showUpMd) && <Link
+            style={{
+              textDecoration: 'none'
+            }} to='/'>
+            <Typography
+              color='whiteSmoke'
+              sx={{
+                flexGrow: 1,
+                display: 'block',
+                fontSize: '22px',
+                cursor: 'pointer',
+                fontWeight: 600
+              }}
+              className={navbarOpen ? 'nav-home-link' : ''}>
+              Real&nbsp;Estate
+            </Typography>
+          </Link>}
+
+          {(showUpMd || navbarOpen) &&
+            <Toolbar
+              style={{
+                display: 'flex',
+                margin: 'auto auto',
+                alignItems: 'center'
+              }}
+              className={navbarOpen ? 'toolbar' : ''}
+            >
+              <Link href='/' underline='none'
+                className={navbarOpen ? 'toolbar-btn' : ''}>
+                <Button
+                  color='inherit'
+                  variant='text'
+                  style={{
+                    color: ' #E4D9FF',
+                    margin: 'auto 16px',
+                  }}
+                >
+                  Home
+                </Button>
+              </Link>
+
+              <Link href='/property' underline='none'
+                className={navbarOpen ? 'toolbar-btn' : ''}>
+                <Button
+                  color='inherit'
+                  variant='text'
+                  style={{
+                    color: ' #E4D9FF',
+                    margin: 'auto 16px',
+                  }}
+                >
+                  Property
+                </Button>
+              </Link>
+
+              <Link href='/agent' underline='none'
+                className={navbarOpen ? 'toolbar-btn' : ''}>
+                <Button
+                  color='inherit'
+                  variant='text'
+                  style={{
+                    color: ' #E4D9FF',
+                    margin: 'auto 16px',
+                  }}
+                >
+                  Agent
+                </Button>
+              </Link>
+
+              <Link href='/about' underline='none'
+                className={navbarOpen ? 'toolbar-btn' : ''}>
+                <Button
+                  variant='text'
+                  style={{
+                    color: ' #E4D9FF',
+                    margin: 'auto 16px',
+                  }}
+                >
+                  About
+                </Button>
+              </Link>
+            </Toolbar>}
+
+
+          {showDownMd && <Box width={'70%'}>
+            <Button
+              color='inherit'
+              className='nav-open-btn'
+              onClick={handleClick}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                cursor: 'pointer',
+              }}
+              id={navbarOpen ? 'nav-btn-open' : ''}>
+              <Typography className='ham' id={navbarOpen ? 'active' : ''} />
+              <Typography className='ham' id={navbarOpen ? 'active' : ''} />
+              <Typography className='ham' id={navbarOpen ? 'active' : ''} />
+
+            </Button>
+          </Box>}
+
+
+          {!navbarOpen && <Box
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              right: '20px'
+            }}>
+            <Button
+              style={{
+                fontSize: '17px',
+                backgroundColor: '#D1D4DB',
+                height: '72px',
+                borderRadius: '0px',
+                color: '#12172B',
+                textTransform: 'none',
+              }}
+              className='btn-reg'
+              variant='contained'
+              disableElevation
+              disableFocusRipple	>
+              Sign-In
+            </Button>
+            <Button
+              style={{
+                fontSize: '17px',
+                backgroundColor: '#4358B1',
+                height: '72px',
+                borderRadius: '0px',
+                color: '#fff',
+                textTransform: 'none',
+              }}
+              className='btn-reg'
+              variant='contained'
+              disableElevation >
+              Sign-Up
+            </Button>
+          </Box>}
+
+        </Container>
+      </AppBar>
+    </div >
+  )
+}

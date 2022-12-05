@@ -1,0 +1,13 @@
+
+.agent-page{
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+}
+
+.btn{
+    &:hover{
+        color: black;
+    }
+}
