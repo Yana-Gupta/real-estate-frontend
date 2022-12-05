@@ -30,11 +30,11 @@ function Property() {
                         maxWidth="md"
                         sx={{
                             backgroundColor: "#E2EDF3",
-                            margin: '0px auto',
+                            margin: '0px 20px',
                             color: '#002B3D',
                             borderRadius: "30px",
                             borderBottom: '10px solid #290000',
-                            padding: '6px 0px',
+                            padding: '6px auto',
                         }}
                         fullWidth >
                         Houses
@@ -48,7 +48,7 @@ function Property() {
                         background: '#D3DEEE',
                         borderRadius: '5px',
                         border: '1px solid #D3DEEE',
-                        margin: '40px 0px',
+                        margin: '40px auto',
                         padding: '10px 0px 20px 0px'
                     }}
                 >
@@ -60,7 +60,7 @@ function Property() {
                             backgroundColor: "#E2EDF3",
                             alignSelf: 'center',
                             justifySelf: 'center',
-                            margin: '0px auto 20px auto',
+                            margin: '0px 20px 20px 20px',
                             color: '#002B3D',
                             borderRadius: "30px",
                             borderBottom: '10px solid #290000',
@@ -88,7 +88,7 @@ function Property() {
                             backgroundColor: "#E2EDF3",
                             color: '#002B3D',
                             borderRadius: "30px",
-                            margin: '0px auto 20px auto',
+                            margin: '0px 20px 20px 20px',
                             borderBottom: '10px solid #290000',
                             padding: '6px 0px',
                         }}
@@ -116,7 +116,7 @@ function Property() {
                             backgroundColor: "#E2EDF3",
                             color: '#002B3D',
                             borderRadius: "30px",
-                            margin: '0px auto 20px auto',
+                            margin: '0px 20px 20px 20px',
                             borderBottom: '10px solid #290000',
                             padding: '6px 0px',
                         }}

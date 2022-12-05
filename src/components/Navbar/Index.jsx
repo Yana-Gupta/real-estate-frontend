@@ -20,7 +20,6 @@ export default function Navbar() {
 
   async function handleClick() {
     await setNavbarOpen((!navbarOpen));
-    // console.log(navbarOpen);
   }
 
   return (
@@ -72,55 +71,63 @@ export default function Navbar() {
               }}
               className={navbarOpen ? 'toolbar' : ''}
             >
-              <Link href='/' underline='none'
+              <Link
+                href='/'
+                underline='none'
                 className={navbarOpen ? 'toolbar-btn' : ''}>
                 <Button
                   color='inherit'
                   variant='text'
                   style={{
                     color: ' #E4D9FF',
-                    margin: 'auto 16px',
+                    margin: 'auto 10px',
                   }}
                 >
                   Home
                 </Button>
               </Link>
 
-              <Link href='/property' underline='none'
+              <Link
+                href='/property'
+                underline='none'
                 className={navbarOpen ? 'toolbar-btn' : ''}>
                 <Button
                   color='inherit'
                   variant='text'
                   style={{
                     color: ' #E4D9FF',
-                    margin: 'auto 16px',
+                    margin: 'auto 10px',
                   }}
                 >
                   Property
                 </Button>
               </Link>
 
-              <Link href='/agent' underline='none'
+              <Link
+                href='/agent'
+                underline='none'
                 className={navbarOpen ? 'toolbar-btn' : ''}>
                 <Button
                   color='inherit'
                   variant='text'
                   style={{
                     color: ' #E4D9FF',
-                    margin: 'auto 16px',
+                    margin: 'auto 10px',
                   }}
                 >
                   Agent
                 </Button>
               </Link>
 
-              <Link href='/about' underline='none'
+              <Link
+                href='/about'
+                underline='none'
                 className={navbarOpen ? 'toolbar-btn' : ''}>
                 <Button
                   variant='text'
                   style={{
                     color: ' #E4D9FF',
-                    margin: 'auto 16px',
+                    margin: 'auto 10px',
                   }}
                 >
                   About
@@ -157,7 +164,6 @@ export default function Navbar() {
             }}>
             <Button
               style={{
-                fontSize: '17px',
                 backgroundColor: '#D1D4DB',
                 height: '72px',
                 borderRadius: '0px',
@@ -172,7 +178,6 @@ export default function Navbar() {
             </Button>
             <Button
               style={{
-                fontSize: '17px',
                 backgroundColor: '#4358B1',
                 height: '72px',
                 borderRadius: '0px',

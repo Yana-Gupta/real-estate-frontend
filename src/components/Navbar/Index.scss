@@ -3,11 +3,6 @@
 }
 
 
-@media (max-width: 768px) {
-    .btn-reg {
-        font-size: 3px;
-    }
-}
 
 @media (max-width: 700px) {
     .nav-open-btn {
@@ -55,17 +50,21 @@
 
     .toolbar {
         position: absolute;
-        top: 90px;
+        top: 102px;
         flex-direction: column;
         width: 100%;
-
-    }
-    .toolbar-btn{
-        width: 100%;
+        left: 0px;
+        text-align: center;
+        height: 500px;
     }
 
     .toolbar-navopen {
         display: none;
+    }
+
+    .toolbar-btn{
+        height: 58px;
+        margin: auto auto;
     }
 
     .nav-home-link {

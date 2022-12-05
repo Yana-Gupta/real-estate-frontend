@@ -14,3 +14,25 @@
     z-index: -2;
    
 }
+
+.homebox{
+    width: 52%;
+}
+
+@media (max-width: 1200px) {
+    .homebox{
+        width: 60%;
+    } 
+}
+
+@media (max-width: 1000px) {
+    .homebox{
+        width: 64%;
+    } 
+}
+
+@media (max-width: 830px) {
+    .homebox{
+        width: 68%;
+    } 
+}

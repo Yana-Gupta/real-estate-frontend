@@ -6,8 +6,42 @@
     width: 100%;
 }
 
-.btn{
-    &:hover{
-        color: black;
+
+@media ( max-width: 900px ) {
+    .heading{
+        font-size: 30px;
+    }
+}
+
+@media ( max-width: 725px ) {
+    .heading{
+        font-size: 26px;
+    }
+}
+
+@media ( max-width: 650px ) {
+    .heading{
+        font-size: 23px;
+    }
+    
+}
+
+@media ( max-width: 600px ) {
+    .heading{
+        font-size: 21px;
+    }
+}
+
+@media ( max-width: 525px ) {
+    .heading{
+        font-size: 20px;
+        padding: 8px 40px;
+    }
+}
+
+@media ( max-width: 480px ) {
+    .heading{
+        font-size: 20px;
+        padding: 8px 30px;
     }
 }

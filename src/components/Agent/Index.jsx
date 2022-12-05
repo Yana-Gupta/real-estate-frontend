@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import './Index.scss'
 import axios from 'axios';
-import './Index.scss'
+import './Index.scss';
 const URL1 = 'https://api.unsplash.com/search/photos?page=1&query=goodlooking+adult+man+face+photo&client_id=OKNk76V2HgprC7fR-LdKLmlFTHhhFKwKtSzrgvHAvcc';
 
 
@@ -32,8 +32,8 @@ const Agent = () => {
                 xl: 1536
             }
         }
-
     });
+
     const [agentInfo, setAgentInfo] = useState([]);
     useEffect(() =>
         async function fetchAgentInfo() {
@@ -51,18 +51,19 @@ const Agent = () => {
 
     return (
         <div className='agent-page'>
-            <Container maxWidth='xl'>
+            <Container maxWidth='xl' sx={{display: 'flex', flexDirection:'column', alignItems:'center'}}>
                 <Typography
-                    variant='h4'
+                    variant='h5'
                     align='center'
+                    className='heading'
+                    maxWidth='md'
                     sx={{
-                        margin: '20px auto',
-                        background: '#8789AB',
-                        borderRadius: '16px',
-                        padding: '12px 0px',
-                        border: '2px solid #434460'
-                    }}
-                    maxWidth="md">
+                        margin: '20px 30px',
+                        background: '#6C7289',
+                        borderRadius: '26px',
+                        padding: '8px 60px',
+                        border: '2px solid #434460',
+                    }}>
                     PROPERTY DEALING AGENTS
                 </Typography>
                 <ThemeProvider theme={theme}>
@@ -71,41 +72,51 @@ const Agent = () => {
                             spacing={2}
                             container
                         >
-                            {{ agentInfo } && agentInfo.map((agent) => {
-                                return (
-                                    <Grid
-                                        key={agent.id}
-                                        xxs={12} xs={6} sm={4} md={3} lg={2.4} xl={2}
-                                        item>
+                            {{ agentInfo } &&
+                                agentInfo.map((agent) => {
+                                    return (
+                                        <Grid
+                                            key={agent.id}
+                                            xxs={12}
+                                            xs={6}
+                                            sm={4}
+                                            md={3}
+                                            lg={2.4}
+                                            xl={2}
+                                            item>
 
-                                        <Card >
-                                            <CardMedia
-                                                height='220'
-                                                component='img'
-                                                image={agent.urls.regular}
-                                            />
-                                            <Typography align='center' variant='h6'>
-                                                Steve Smith
-                                            </Typography>
-                                            <CardActions>
-                                                <Button>
-                                                    Contact
-                                                </Button>
-                                                <Button
-                                                    className='btn'
-                                                    variant='contained'
-                                                    sx={{
-                                                        backgroundColor: '#1F2333',
-                                                        textTransform: 'none'
-                                                    }}>
-                                                    View History
-                                                </Button>
-                                            </CardActions>
+                                            <Card >
+                                                <CardMedia
+                                                    height='220'
+                                                    component='img'
+                                                    image={agent.urls.regular}
+                                                />
+                                                <Typography
+                                                    align='center'
+                                                    variant='h6'>
+                                                    Steve Smith
+                                                </Typography>
+                                                <CardActions>
+                                                    <Button>
+                                                        Contact
+                                                    </Button>
+                                                    <Button
+                                                        color='inherit'
+                                                        className='btn'
+                                                        variant='contained'
+                                                        sx={{
+                                                            backgroundColor: '#1F2333',
+                                                            textTransform: 'none',
+                                                            color: '#E7ECEF',
+                                                        }}>
+                                                        View History
+                                                    </Button>
+                                                </CardActions>
 
-                                        </Card>
-                                    </Grid>
-                                )
-                            })}
+                                            </Card>
+                                        </Grid>
+                                    )
+                                })}
                         </Grid>
                     </Container>
                 </ThemeProvider>

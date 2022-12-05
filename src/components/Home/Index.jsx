@@ -9,23 +9,32 @@ import {
   ButtonGroup,
   Card,
   Grid,
+  useMediaQuery,
 } from '@mui/material';
-import { SearchRoundedIcon } from '@mui/icons-material';
+import { SearchRounded } from '@mui/icons-material';
+import BorderAllIcon from '@mui/icons-material/BorderAll';
+import HouseIcon from '@mui/icons-material/House';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
 import './Index.scss';
 
 
 const propertyOptions = [
   {
     type: 'All Residentials',
+    icon: <BorderAllIcon/>
   },
   {
     type: 'Home',
+    icon: <HouseIcon />
   },
   {
     type: 'Apartment',
+    icon: <ApartmentIcon />
   },
   {
     type: 'Building',
+    icon: <LocationCityIcon />
   },
 
 ];
@@ -33,13 +42,13 @@ const userInterest = [
   { type: 'buy', },
   { type: 'sell', },
   { type: 'rent', },
-  { type: 'for rent', },
   { type: 'pg', },
 ]
 
 function Home() {
+  const showDown780 = useMediaQuery('(min-Width: 780px)')
 
-  const optionArea = '33';
+  const optionArea = '40';
   const [option, setOption] = useState('All Residentials');
 
   const handleChange = (event) => {
@@ -53,12 +62,12 @@ function Home() {
           display: 'flex',
           flexDirection: 'column',
           background: '#fff',
-          width: '58%',
+          // width: '58%',
           position: 'relative',
           top: '196px',
           margin: 'auto',
           borderRadius: '20px',
-        }}>
+        }} className='homebox'>
         <Box
           sx={{
             width: '100%',
@@ -97,10 +106,11 @@ function Home() {
             onChange={handleChange}
             sx={{
               width: `${optionArea}%`,
-              outline: 'none'
+              outline: 'none',
             }} >
             {{ propertyOptions } && propertyOptions.map((option) => {
               return (
+
                 <MenuItem key={option.type} value={option.type}>
                   {option.type}
                 </MenuItem>
@@ -109,7 +119,7 @@ function Home() {
           </TextField>
           <TextField
             variant="filled"
-            label={<SearchRoundedIcon />}
+            label={<SearchRounded />}
             sx={{
               alignContent: 'start'
             }}
