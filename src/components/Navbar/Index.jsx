@@ -162,33 +162,37 @@ export default function Navbar() {
               flexDirection: 'row',
               right: '20px'
             }}>
-            <Button
-              style={{
-                backgroundColor: '#D1D4DB',
-                height: '72px',
-                borderRadius: '0px',
-                color: '#12172B',
-                textTransform: 'none',
-              }}
-              className='btn-reg'
-              variant='contained'
-              disableElevation
-              disableFocusRipple	>
-              Sign-In
-            </Button>
-            <Button
-              style={{
-                backgroundColor: '#4358B1',
-                height: '72px',
-                borderRadius: '0px',
-                color: '#fff',
-                textTransform: 'none',
-              }}
-              className='btn-reg'
-              variant='contained'
-              disableElevation >
-              Sign-Up
-            </Button>
+            <Link href='/login' underline='none'>
+              <Button
+                style={{
+                  backgroundColor: '#D1D4DB',
+                  height: '72px',
+                  borderRadius: '0px',
+                  color: '#12172B',
+                  textTransform: 'none',
+                }}
+                className='btn-reg'
+                variant='contained'
+                disableElevation
+                disableFocusRipple	>
+                Sign-In
+              </Button>
+            </Link>
+            <Link href='/signin'>
+              <Button
+                style={{
+                  backgroundColor: '#4358B1',
+                  height: '72px',
+                  borderRadius: '0px',
+                  color: '#fff',
+                  textTransform: 'none',
+                }}
+                className='btn-reg'
+                variant='contained'
+                disableElevation >
+                Sign-Up
+              </Button>
+            </Link>
           </Box>}
 
         </Container>

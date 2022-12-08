@@ -7,8 +7,6 @@ import {
   Container,
   Typography,
   ButtonGroup,
-  Card,
-  Grid,
   useMediaQuery,
 } from '@mui/material';
 import { SearchRounded } from '@mui/icons-material';
@@ -16,6 +14,7 @@ import BorderAllIcon from '@mui/icons-material/BorderAll';
 import HouseIcon from '@mui/icons-material/House';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
+import Client from './Clients/Index';
 import './Index.scss';
 
 
@@ -61,16 +60,7 @@ function Home() {
   return (
     <div className='hm-pg'>
       <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          background: '#fff',
-          // width: '58%',
-          position: 'relative',
-          top: '196px',
-          margin: 'auto',
-          borderRadius: '20px',
-        }} className='homebox'>
+        className='homebox'>
         <Box
           sx={{
             width: '100%',
@@ -112,7 +102,9 @@ function Home() {
               width: `${optionArea}%`,
               outline: 'none',
               height: '56px',
-              padding: 'auto'
+              padding: 'auto',
+              backgroundColor:'#ffff',
+              borderBottomLeftRadius: '20px',
             }} >
             {{ propertyOptions } && propertyOptions.map((option) => {
               return (
@@ -125,7 +117,6 @@ function Home() {
                   {showDown780px &&
                     <Typography>
                       {option.icon}
-
                     </Typography>
                   }
                 </MenuItem>
@@ -138,7 +129,8 @@ function Home() {
             label={<SearchRounded />}
             sx={{
               alignContent: 'start',
-              height: '56px'
+              height: '56px',
+              backgroundColor:'#ffff',
             }}
             fullWidth
           />
@@ -170,27 +162,14 @@ function Home() {
         }}>
         <Container maxWidth='xl'>
           <Typography
-            variant='h3'
-            align='center'>
-            Lorem
+            variant='h5'
+            component='h1'
+            align='center' marginTop={4}>
+            Our Client and Reviews
           </Typography>
+          <Client />
         </Container>
-        <Container
-          display="flex">
-          <Grid container maxWidth='lg' spacing={6}
-            direction="row">
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              lg={4}
-              xl={4} >
-              <Card>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus tenetur dolor eum blanditiis soluta ullam unde corrupti reiciendis earum, dicta cum repudiandae sit iste nihil laboriosam. Fugit, omnis. Earum, explicabo.
-              </Card>
-            </Grid>
-          </Grid>
-        </Container>
+       
       </Container>
     </div >
   )

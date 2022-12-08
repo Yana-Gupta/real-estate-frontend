@@ -1,9 +1,13 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-.hm-pg::before{
+.hm-pg {
+    width: 100vw;
+}
+
+.hm-pg::before {
     content: '';
     position: absolute;
     top: 72px;
@@ -12,27 +16,52 @@
     height: 354px;
     background: url('../../assets/background.jpg') no-repeat center center/cover #222B59;
     z-index: -2;
-   
+
 }
 
-.homebox{
-    width: 52%;
+
+.homebox {
+    width: 703px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 192px;
+    margin: auto;
+    width: 60%;
 }
 
 @media (max-width: 1200px) {
-    .homebox{
+    .homebox {
         width: 60%;
-    } 
+    }
 }
 
 @media (max-width: 1000px) {
-    .homebox{
+    .homebox {
         width: 64%;
-    } 
+    }
 }
 
 @media (max-width: 830px) {
-    .homebox{
+    .homebox {
         width: 68%;
-    } 
+    }
+}
+
+@media (max-width: 456px) {
+    .homebox {
+        width: 80%;
+    }
+}
+
+@media (max-width: 356px) {
+    .homebox {
+        width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .homebox {
+        width: 94%;
+    }
 }

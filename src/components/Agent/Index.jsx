@@ -89,7 +89,7 @@ const Agent = () => {
                                                 <CardMedia
                                                     height='220'
                                                     component='img'
-                                                    image={agent.urls.regular}
+                                                    image={`${agent.urls.regular}&w=800&dpr=2`}
                                                 />
                                                 <Typography
                                                     align='center'
