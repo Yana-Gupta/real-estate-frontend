@@ -62,7 +62,7 @@ export default function SignIn() {
                 }} maxWidth='md'>
                     <Paper elevation={4}>
                         < Typography component='h1' variant='h5' sx={{
-                            padding:'6px 10px'
+                            padding: '6px 10px'
                         }}>SignIn</Typography>
                     </Paper>
                     <Box sx={{
@@ -110,7 +110,7 @@ export default function SignIn() {
                                 </Grid>
                                 <Grid xxs={12} xs={12} sm={12} md={12} item>
                                     <Link href='/login' underline="none" sx={{
-                                        position:'relative',
+                                        position: 'relative',
                                     }}>
                                         <Typography fontSize={'.81rem'} variant="span">
                                             Already a User? Login.

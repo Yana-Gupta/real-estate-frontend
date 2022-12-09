@@ -25,7 +25,6 @@ export default function Navbar() {
   return (
     <div className='nav-bar'>
       <AppBar
-        position='absolute'
         sx={{
           backgroundColor: '#222B59',
           width: '100%',

@@ -139,9 +139,10 @@ function Property() {
                     <Building />
 
                 </Container>
-
-
             </Container>
+
+            {/* <Footer /> */}
+
         </div>
     )
 }

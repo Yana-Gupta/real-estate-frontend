@@ -49,39 +49,40 @@ export default function Login() {
                 <ThemeProvider theme={theme}>
 
                     <Box sx={{
-                        marginTop: 3,
+                        marginTop: 1,
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        padding: '0px 40px'
+                        padding: '0px 20px'
 
                     }} maxWidth='xs'>
                         <Paper elevation={4}>
                             < Typography component='h1' variant='h5' sx={{
                                 padding: '6px 20px'
-                            }}>Login</Typography>
+                            }}>
+                                Login
+                            </Typography>
                         </Paper>
                         <Box sx={{
-                            mt: 2,
-                            // width: '100%',
+                            mt: 5,
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
                             justifyContent: 'center',
                             padding: '0px 100px'
                         }}>
-                            <form action="" method="get">
-                                <Grid spacing={3} container>
+                            <form action="/" method="get">
+                                <Grid spacing={1} container>
 
-                                    <Grid xxs={12} item>
-                                        <TextField variant="standard" type={'email'} label='Email' required fullWidth />
+                                    <Grid xxs={12} margin='auto' item>
+                                        <TextField variant="standard" type={'email'} label='Email' required fullWidth/>
                                     </Grid>
-                                    <Grid xxs={12} item>
+                                    <Grid xxs={12} margin='auto' item>
                                         <TextField variant="outlined" type={'tel'} label="Phone Number" required fullWidth />
                                     </Grid>
 
-                                    <Grid xxs={12} xs={12} sm={12} item>
-                                        <TextField type={'password'} label='Enter password' />
+                                    <Grid xxs={12} xs={12} sm={12} margin='auto' item>
+                                        <TextField type={'password'} label='Enter password' required fullWidth />
                                     </Grid>
 
                                     <Grid xxs={12} xs={12} sm={12} item >

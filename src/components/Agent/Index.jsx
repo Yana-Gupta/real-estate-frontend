@@ -51,7 +51,7 @@ const Agent = () => {
 
     return (
         <div className='agent-page'>
-            <Container maxWidth='xl' sx={{display: 'flex', flexDirection:'column', alignItems:'center'}}>
+            <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography
                     variant='h5'
                     align='center'

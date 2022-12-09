@@ -16,24 +16,25 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import Client from './Clients/Index';
 import './Index.scss';
+import Footer from '../Footer/Index';
 
 
 const propertyOptions = [
   {
     type: 'All Residentials',
-    icon: <BorderAllIcon style={{color:'#443D66'}}/>
+    icon: <BorderAllIcon style={{ color: '#443D66' }} />
   },
   {
     type: 'Home',
-    icon: <HouseIcon style={{color:'#443D66'}}/>
+    icon: <HouseIcon style={{ color: '#443D66' }} />
   },
   {
     type: 'Apartment',
-    icon: <ApartmentIcon style={{color:'#443D66'}}/>
+    icon: <ApartmentIcon style={{ color: '#443D66' }} />
   },
   {
     type: 'Building',
-    icon: <LocationCityIcon style={{color:'#443D66'}}/>
+    icon: <LocationCityIcon style={{ color: '#443D66' }} />
   },
 
 ];
@@ -103,7 +104,7 @@ function Home() {
               outline: 'none',
               height: '56px',
               padding: 'auto',
-              backgroundColor:'#ffff',
+              backgroundColor: '#ffff',
               borderBottomLeftRadius: '20px',
             }} >
             {{ propertyOptions } && propertyOptions.map((option) => {
@@ -130,7 +131,7 @@ function Home() {
             sx={{
               alignContent: 'start',
               height: '56px',
-              backgroundColor:'#ffff',
+              backgroundColor: '#ffff',
             }}
             fullWidth
           />
@@ -155,21 +156,21 @@ function Home() {
         maxWidth="xl"
         sx={{
           background: '#fff',
-          position: 'relative',
+          // position: 'relative',
           width: '100%',
-          top: '338px',
-          margin: 'auto',
+          top: '308px',
+          margin: '200px auto 10px auto',
         }}>
         <Container maxWidth='xl'>
           <Typography
             variant='h5'
             component='h1'
-            align='center' marginTop={4}>
-            Our Client and Reviews
+            align='center' marginTop={4} paddingTop={2}>
+            Our Clients and Reviews
           </Typography>
           <Client />
         </Container>
-       
+
       </Container>
     </div >
   )
