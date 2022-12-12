@@ -11,7 +11,7 @@ function TextAndContent(props) {
   const { Content } = props;
   return (
     <div>
-      <Box maxWidth={'lg'}>
+      <Box maxWidth={"xl"} alignSelf="center">
         {{ Content } && Content.map((item) => {
           return (
             <Grid container key={item.cont} marginBottom={'20px'}>

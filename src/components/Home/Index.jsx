@@ -16,7 +16,6 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import Client from './Clients/Index';
 import './Index.scss';
-import Footer from '../Footer/Index';
 
 
 const propertyOptions = [
@@ -156,7 +155,6 @@ function Home() {
         maxWidth="xl"
         sx={{
           background: '#fff',
-          // position: 'relative',
           width: '100%',
           top: '308px',
           margin: '200px auto 10px auto',
