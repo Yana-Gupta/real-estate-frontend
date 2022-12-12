@@ -25,8 +25,9 @@ export default function Footer() {
     })
     return (
         <ThemeProvider theme={theme}>
-            <Container
+            <Container maxWidth={'100%'}
                 sx={{
+                    width: '100vw',
                     position: 'relative',
                     bottom: '0px',
                     left: '0px',
@@ -38,7 +39,9 @@ export default function Footer() {
                 <form
                     action=""
                     method="post"
-                    className="form">
+                    className="form" style={{
+                        width: '100%'
+                    }}>
                     <FormLabel>
                         <Typography variant="h6" component="h1" color="primary">Any Review and Query</Typography>
                     </FormLabel>
