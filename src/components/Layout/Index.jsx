@@ -6,10 +6,8 @@ function Layout() {
   return (
     <div className='App'>
       <Navbar />
-      <div>
-        <Outlet />
-      </div>
-      <Footer/>
+      <Outlet />
+      <Footer />
     </div>
   )
 }

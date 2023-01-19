@@ -28,7 +28,8 @@ export default function Footer() {
     })
     return (
         <ThemeProvider theme={theme}>
-            <Box maxWidth={'100%'}
+            <Box
+                width={"100vw"}
                 padding={'0px'}
                 sx={{
                     position: 'relative',
@@ -38,7 +39,7 @@ export default function Footer() {
                     color: '#FCD6C5',
                     margin: '20px 0px 0px 0px',
                 }}>
-                <Container maxWidth={'100%'}>
+                <Container>
                     <form
                         action=""
                         method="post"

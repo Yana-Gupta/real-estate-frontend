@@ -63,7 +63,6 @@ function Home() {
         className='homebox'>
         <Box
           sx={{
-            width: '100%',
             display: 'flex',
           }}>
           <ButtonGroup fullWidth>
@@ -152,14 +151,12 @@ function Home() {
       </Box>
 
       <Container
-        maxWidth="xl"
         sx={{
+          minWidth: "100vw",
           background: '#fff',
-          width: '100%',
-          top: '308px',
           margin: '200px auto 10px auto',
         }}>
-        <Container maxWidth='xl'>
+        <Container>
           <Typography
             variant='h5'
             component='h1'

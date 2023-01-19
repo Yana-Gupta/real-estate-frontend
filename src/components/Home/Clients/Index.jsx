@@ -49,7 +49,7 @@ export default function Client() {
     return (
 
         <ThemeProvider theme={theme}>
-            <Box maxWidth='xl' paddingBottom={'20px'}>
+            <Box paddingBottom={'20px'}>
                 <Grid
                     spacing={1}
                     paddingTop={'12px'}
@@ -68,7 +68,7 @@ export default function Client() {
                                     xl={1.5}
                                     item>
 
-                                    <Card >
+                                    <Card height="230px" width="100px">
                                         <CardHeader
                                             avatar={
                                                 <Avatar sx={{ bgcolor: '#ff2322' }} variant='circular' src={client.urls.raw}></Avatar>
@@ -78,10 +78,8 @@ export default function Client() {
                                             }
                                         />
 
-
                                         <CardMedia
-                                            height='110'
-                                            width='120'
+                                            height='120'
                                             sx={{
                                                 padding: '2px 5px'
                                             }}
