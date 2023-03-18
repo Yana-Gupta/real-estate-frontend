@@ -15,28 +15,7 @@ import {
 } from '@mui/material';
 
 
-const URL = 'https://api.unsplash.com/search/photos?page=1&query=building+front&client_id=OKNk76V2HgprC7fR-LdKLmlFTHhhFKwKtSzrgvHAvcc';
-
-
-
 function Building() {
-    const [imgArray, setImgArray] = useState([]);
-    useEffect(() =>
-        async function fetchImageArray() {
-            await axios.get(URL)
-                .then(
-                    res => {
-                        setImgArray(res.data.results);
-                    })
-                .catch(
-                    err => console.log('error is ', err)
-                )
-        }, [imgArray]
-    )
-
-
-
-
     return (
         <Container maxWidth='xl' sx={{ margin: "10px 0px 0px 0px" }}>
             <Grid
@@ -50,9 +29,9 @@ function Building() {
                         <Grid
                             key={item.id}
                             xs={12} sm={6} md={4} lg={3} xl={2.4}
-                            item 
+                            item
                             WidthFull
-                            >
+                        >
                             <Card WidthFull>
                                 <CardMedia
                                     component='img'
@@ -74,7 +53,7 @@ function Building() {
                                             postion: 'relative',
                                             left: '0px',
                                             marginBottom: '0px'
-                                            
+
                                         }} fullWidth>
                                         Location
                                     </Button>
@@ -86,7 +65,7 @@ function Building() {
                                             right: '0px',
                                             textTransform: 'none'
                                         }}
-                                    fullWidth>
+                                        fullWidth>
                                         View Details
                                     </Button>
                                 </CardActions>

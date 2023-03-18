@@ -15,9 +15,8 @@ import {
     ThemeProvider
 } from '@mui/material';
 import './Index.scss'
-import axios from 'axios';
 import './Index.scss';
-const URL1 = 'https://api.unsplash.com/search/photos?page=1&query=goodlooking+adult+man+face+photo&client_id=OKNk76V2HgprC7fR-LdKLmlFTHhhFKwKtSzrgvHAvcc';
+import AgentData from '../../data/Client';
 
 
 const Agent = () => {
@@ -34,20 +33,6 @@ const Agent = () => {
         }
     });
 
-    const [agentInfo, setAgentInfo] = useState([]);
-    useEffect(() =>
-        async function fetchAgentInfo() {
-            await axios.get(URL1)
-                .then(
-                    (res) => {
-                        setAgentInfo(res.data.results);
-                    }
-                )
-                .catch(
-                    err => console.log(err)
-                )
-        }
-    )
 
     return (
         <div className='agent-page'>
@@ -59,10 +44,11 @@ const Agent = () => {
                     maxWidth='md'
                     sx={{
                         margin: '20px 30px',
-                        background: '#6C7289',
+                        background: '#4774AE',
                         borderRadius: '26px',
                         padding: '8px 60px',
-                        border: '2px solid #434460',
+                        borderBottom: '20px solid #434460',
+                        color: '#E7ECEF',
                     }}>
                     PROPERTY DEALING AGENTS
                 </Typography>
@@ -72,8 +58,8 @@ const Agent = () => {
                             spacing={2}
                             container
                         >
-                            {{ agentInfo } &&
-                                agentInfo.map((agent) => {
+                            {{ AgentData } &&
+                                AgentData.map((agent) => {
                                     return (
                                         <Grid
                                             key={agent.id}
@@ -85,23 +71,24 @@ const Agent = () => {
                                             xl={2}
                                             item>
 
-                                            <Card >
+                                            <Card>
                                                 <CardMedia
                                                     height='220'
                                                     component='img'
-                                                    image={`${agent.urls.regular}&w=800&dpr=2`}
+                                                    image={agent.image}
                                                 />
                                                 <Typography
                                                     align='center'
-                                                    variant='h6'>
-                                                    Steve Smith
+                                                    variant='h6'
+                                                >
+                                                    {agent.name}
                                                 </Typography>
                                                 <CardActions>
                                                     <Button>
                                                         Contact
                                                     </Button>
                                                     <Button
-                                                        color='inherit'
+                                                        color='success'
                                                         className='btn'
                                                         variant='contained'
                                                         sx={{
@@ -112,7 +99,6 @@ const Agent = () => {
                                                         View History
                                                     </Button>
                                                 </CardActions>
-
                                             </Card>
                                         </Grid>
                                     )

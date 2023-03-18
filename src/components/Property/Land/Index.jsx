@@ -13,17 +13,11 @@ import {
     Grid,
     Typography
 } from '@mui/material';
+import LandData from '../../../data/land';
 
-const URL = 'https://api.unsplash.com/search/photos?page=6&query=Barron+Empty+Land+Photos&client_id=OKNk76V2HgprC7fR-LdKLmlFTHhhFKwKtSzrgvHAvcc';
 
 const Land = () => {
-    const [apartmentDetail, setApartmentDetail] = useState([]);
-    useEffect(() =>
-        async function fetchApartmentImg() {
-            axios.get(URL).then((res) => setApartmentDetail(res.data.results))
-                .catch(err => console.log(err))
-        }
-    )
+
     return (
         <Container
             maxWidth="xl"
@@ -32,7 +26,7 @@ const Land = () => {
             <Grid
                 container
                 spacing={5} >
-                {{ apartmentDetail } && apartmentDetail.map((item) => {
+                {{ LandData } && LandData.map((item) => {
                     return (
                         <Grid
                             xs={12} sm={6} md={4} lg={3} xl={2.4}
@@ -41,7 +35,7 @@ const Land = () => {
                             <Card>
                                 <CardMedia
                                     component='img'
-                                    image={item.urls.raw}
+                                    image={item.image}
                                     height='200'
                                 />
                                 <CardContent>

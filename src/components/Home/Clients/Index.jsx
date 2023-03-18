@@ -46,6 +46,9 @@ export default function Client() {
                     {ClientData && ClientData.map((client) => {
                         return (
                             <Grid
+                                sx={{
+                                    height: "300px"
+                                }}
                                 key={client.id}
                                 xxs={6}
                                 xs={4}
@@ -54,10 +57,15 @@ export default function Client() {
                                 lg={2}
                                 xl={1.5}
                                 item>
-                                <Card height="230px" width="100px">
+                                <Card>
                                     <CardHeader
                                         avatar={
-                                            <Avatar sx={{ bgcolor: '#ff2322' }} src={client.image} />
+                                            <Avatar
+                                                sx={{
+                                                    bgcolor: '#ff2322',
+                                                }}
+                                                src={client.image}
+                                            />
                                         }
                                         title={
                                             <Typography variant="p" component="h5">{client.name}</Typography>

@@ -1,14 +1,14 @@
-import h1 from "../assets/image/image_human.jpg";
-import h2 from "../assets/image/image_human (2).jpg";
-import h3 from "../assets/image/image_human (3).jpg";
-import h4 from "../assets/image/image_human (4).jpg";
-import h5 from "../assets/image/image_human (5).jpg";
-import h6 from "../assets/image/image_human (6).jpg";
-import h7 from "../assets/image/image_human (7).jpg";
-import h8 from "../assets/image/image_human (8).jpg";
-import h9 from "../assets/image/image_human (9).jpg";
-import h10 from "../assets/image/image_human (10).jpg";
-import h11 from "../assets/image/image_human (11).jpg";
+import h1 from "../assets/image/person/image_human.jpg";
+import h2 from "../assets/image/person/image_human (2).jpg";
+import h3 from "../assets/image/person/image_human (3).jpg";
+import h4 from "../assets/image/person/image_human (4).jpg";
+import h5 from "../assets/image/person/image_human (5).jpg";
+import h6 from "../assets/image/person/image_human (6).jpg";
+import h7 from "../assets/image/person/image_human (7).jpg";
+import h8 from "../assets/image/person/image_human (8).jpg";
+import h9 from "../assets/image/person/image_human (9).jpg";
+import h10 from "../assets/image/person/image_human (10).jpg";
+import h11 from "../assets/image/person/image_human (11).jpg";
 
 const Client = [
     {
@@ -43,7 +43,7 @@ const Client = [
     },
     {
         id: 6,
-        name: "Kylie Jen",
+        name: "Kyle Jen",
         image: h6,
         review: "I found my dream home with the help of this website. I would recommend it to anyone looking for a new home."
     },
@@ -55,7 +55,7 @@ const Client = [
     },
     {
         id: 8,
-        name: "Mike Cyrus",
+        name: "Mike ",
         image: h8,
         review: "I found my dream home with the help of this website. I would recommend it to anyone looking for a new home."
     },
