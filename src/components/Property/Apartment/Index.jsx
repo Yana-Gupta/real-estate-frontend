@@ -1,9 +1,4 @@
 import { Container } from '@mui/system';
-import axios from 'axios';
-import React, {
-    useEffect,
-    useState
-} from 'react';
 import {
     Button,
     Card,
@@ -14,16 +9,11 @@ import {
     Typography
 } from '@mui/material';
 
-const URL = 'https://api.unsplash.com/search/photos?page=9&query=apartment+inside&client_id=OKNk76V2HgprC7fR-LdKLmlFTHhhFKwKtSzrgvHAvcc';
+import ApartmentData from '../../../data/apartment';
+
 
 const Apartment = () => {
-    const [apartmentDetail, setApartmentDetail] = useState([]);
-    useEffect(() =>
-        async function fetchApartmentImg() {
-            axios.get(URL).then((res) => setApartmentDetail(res.data.results))
-                .catch(err => console.log(err))
-        }
-    )
+    
     return (
         <Container
             maxWidth="xl"
@@ -32,7 +22,7 @@ const Apartment = () => {
             <Grid
                 container
                 spacing={5} >
-                {{ apartmentDetail } && apartmentDetail.map((item) => {
+                {{ ApartmentData } && ApartmentData.map((item) => {
                     return (
                         <Grid
                             xs={12} sm={6} md={4} lg={3} xl={2.4}
@@ -41,7 +31,7 @@ const Apartment = () => {
                             <Card>
                                 <CardMedia
                                     component='img'
-                                    image={item.urls.regular}
+                                    image={item.image}
                                     height='200'
                                 />
                                 <CardContent>

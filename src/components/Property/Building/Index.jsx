@@ -1,8 +1,4 @@
-import React, {
-    useState,
-    useEffect
-} from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Container } from '@mui/system';
 import {
     Button,
@@ -13,6 +9,7 @@ import {
     Grid,
     Typography
 } from '@mui/material';
+import BuildingData from "../../../data/building";
 
 
 function Building() {
@@ -24,7 +21,7 @@ function Building() {
                 container
             >
 
-                {{ imgArray } && imgArray.map((item) => {
+                {{ BuildingData } && BuildingData.map((item) => {
                     return (
                         <Grid
                             key={item.id}
@@ -37,7 +34,7 @@ function Building() {
                                     component='img'
                                     alt=''
                                     height={160}
-                                    image={item.urls.regular}
+                                    image={item.image}
                                 />
                                 <CardContent>
                                     <Typography variant='h6' align='center'>
