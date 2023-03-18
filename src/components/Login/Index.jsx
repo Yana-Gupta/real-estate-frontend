@@ -96,7 +96,6 @@ export default function Login() {
                                     <Grid xxs={12} xs={12} sm={12} item >
                                         <Button variant="contained" type="submit">Submit</Button>
                                     </Grid>
-
                                 </Grid>
                             </form>
                         </Box>

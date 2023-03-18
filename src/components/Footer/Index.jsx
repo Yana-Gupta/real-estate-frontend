@@ -128,13 +128,11 @@ export default function Footer() {
                         alignItems: 'center',
                     }}  >
                     <Typography align="center">
-                        Made by&nbsp;
+                        Made with ❤️ by &nbsp;
                         <Link underline="none"
-                            href="www.linkedin.com/in/yana-gupta"
-                            target="_blank" sx={{
-                                color: '#fff'
-                            }}>
-                            Yana{" "}Gupta
+                            href="https://www.linkedin.com/in/yana-gupta/"
+                            target="_blank" >
+                            Yana Gupta
                         </Link>
                     </Typography>
                 </Container>
