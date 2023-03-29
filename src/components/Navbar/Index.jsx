@@ -33,7 +33,6 @@ export default function Navbar() {
         className={navbarOpen ? 'nav-bar-open' : ''}
       >
         <Container
-          maxWidth='lg'
           sx={{
             color: 'bisque',
             padding: '0px 20px',
@@ -41,7 +40,7 @@ export default function Navbar() {
             alignItems: 'center',
           }}
           className={navbarOpen ? 'nav-bar-container' : ''}
-          disableGutters>
+          >
 
           {(navbarOpen || showUpMd) && <Link
             style={{

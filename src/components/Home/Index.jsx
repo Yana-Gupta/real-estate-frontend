@@ -153,14 +153,15 @@ function Home() {
       <Container
         sx={{
           minWidth: "100vw",
-          background: '#fff',
           margin: '200px auto 10px auto',
         }}>
         <Container>
           <Typography
             variant='h5'
             component='h1'
-            align='center' marginTop={4} paddingTop={2}>
+            align='center'
+            marginTop={4}
+            paddingTop={2}>
             Our Clients and Reviews
           </Typography>
           <Client />

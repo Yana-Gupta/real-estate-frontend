@@ -13,7 +13,7 @@
     top: 72px;
     left: 0px;
     width: 100%;
-    height: 390px;
+    height: 80vh;
     background: url('../../assets/image/background.jpg') no-repeat center center/cover #222B59;
     z-index: -2;
 
@@ -21,13 +21,13 @@
 
 
 .homebox {
-    width: 703px;
     display: flex;
     flex-direction: column;
     position: relative;
     top: 162px;
     margin: auto;
     width: 60%;
+    height: 60vh;
 }
 
 @media (max-width: 1200px) {

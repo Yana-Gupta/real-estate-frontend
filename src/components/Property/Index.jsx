@@ -10,9 +10,9 @@ import './Index.scss';
 
 function Property() {
     return (
-        <div id='page'>
+        <div id='page' style={{margin: "40px auto"}}>
 
-            <Container maxWidth='xl' >
+            <Container maxWidth='xl'>
                 <Container
                     maxWidth='xl'
                     sx={{

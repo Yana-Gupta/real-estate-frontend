@@ -31,7 +31,7 @@ const Agent = () => {
 
 
     return (
-        <div className='agent-page'>
+        <div className='agent-page' style={{margin: "40px 0px"}}>
             <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography
                     variant='h5'
@@ -39,7 +39,7 @@ const Agent = () => {
                     className='heading'
                     maxWidth='md'
                     sx={{
-                        margin: '20px 30px',
+                        margin: '0px auto 40px auto',
                         background: '#4774AE',
                         borderRadius: '26px',
                         padding: '8px 60px',
