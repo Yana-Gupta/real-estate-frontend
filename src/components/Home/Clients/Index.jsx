@@ -39,7 +39,7 @@ export default function Client() {
         <ThemeProvider theme={theme}>
             <Box paddingBottom={'20px'}>
                 <Grid
-                    spacing={1}
+                    spacing={4}
                     paddingTop={'12px'}
                     container
                 >
@@ -55,7 +55,7 @@ export default function Client() {
                                 sm={3}
                                 md={2.4}
                                 lg={2}
-                                xl={1.5}
+                                xl={2}
                                 item>
                                 <Card>
                                     <CardHeader
