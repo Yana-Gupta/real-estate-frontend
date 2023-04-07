@@ -29,6 +29,8 @@ export default function Navbar() {
           backgroundColor: '#222B59',
           width: '100vw',
           position: 'fixed',
+          left: '0px',
+          top: '0px',
         }}
         className={navbarOpen ? 'nav-bar-open' : ''}
       >
