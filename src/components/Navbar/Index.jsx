@@ -27,7 +27,7 @@ export default function Navbar() {
       <AppBar
         sx={{
           backgroundColor: '#222B59',
-          width: '100%',
+          width: '100vw',
           position: 'fixed',
         }}
         className={navbarOpen ? 'nav-bar-open' : ''}
