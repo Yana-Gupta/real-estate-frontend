@@ -58,7 +58,7 @@ export default function Navbar() {
                 fontWeight: 600
               }}
               className={navbarOpen ? 'nav-home-link' : ''}>
-              Real&nbsp;Estate
+              Apna Ghar
             </Typography>
           </Link>}
 
