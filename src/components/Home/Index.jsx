@@ -159,7 +159,8 @@ function Home() {
             variant='h5'
             component='h1'
             align='center'
-            margin={4}
+            marginTop={10}
+            marginBottom={4}
             padding={2}>
             Our Clients and Reviews
           </Typography>
