@@ -5,6 +5,7 @@ import h4 from "../assets/image/building/building (4).jpg";
 import h5 from "../assets/image/building/building (5).jpg";
 
 const building = [
+  
   {
     id: 1,
     image: h1,
