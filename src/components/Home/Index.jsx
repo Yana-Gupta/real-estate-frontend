@@ -152,7 +152,6 @@ function Home() {
 
       <Container
         sx={{
-          minWidth: "100vw",
           margin: '200px auto 10px auto',
         }}>
         <Container>
@@ -160,8 +159,8 @@ function Home() {
             variant='h5'
             component='h1'
             align='center'
-            marginTop={4}
-            paddingTop={2}>
+            margin={4}
+            padding={2}>
             Our Clients and Reviews
           </Typography>
           <Client />
