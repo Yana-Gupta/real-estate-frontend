@@ -58,7 +58,7 @@ export default function Login() {
                     }} maxWidth='xs'>
                         <Paper elevation={4}>
                             < Typography component='h1' variant='h5' sx={{
-                                padding: '6px 20px'
+                                padding: '10px 60px'
                             }}>
                                 Login
                             </Typography>
@@ -72,7 +72,7 @@ export default function Login() {
                             padding: '0px 100px'
                         }}>
                             <form action="/" method="get">
-                                <Grid spacing={1} container>
+                                <Grid spacing={3} container>
 
                                     <Grid xxs={12} margin='auto' item>
                                         <TextField variant="standard" type={'email'} label='Email' required fullWidth/>

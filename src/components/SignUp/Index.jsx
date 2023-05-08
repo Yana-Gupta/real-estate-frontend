@@ -62,7 +62,7 @@ export default function SignIn() {
                 }} maxWidth='md'>
                     <Paper elevation={4}>
                         < Typography component='h1' variant='h5' sx={{
-                            padding: '6px 10px'
+                            padding: '10px 60px'
                         }}>SignIn</Typography>
                     </Paper>
                     <Box sx={{
