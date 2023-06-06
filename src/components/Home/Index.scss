@@ -5,6 +5,7 @@
 
 .hm-pg {
     width: 100%;
+    overflow-x: hidden;
 }
 
 .hm-pg::before {
@@ -12,14 +13,13 @@
     position: absolute;
     left: 0px;
     width: 100%;
-    min-height: 95vh;
+    height: 95vh;
     background: url('../../assets/image/background.jpg') no-repeat center center/cover;
     opacity: .7;
-
 }
 
 .home {
-    min-height: 95vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

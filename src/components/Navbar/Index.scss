@@ -5,6 +5,7 @@
 
 .nav-bar {
     height: 80px;
+    overflow-x: hidden;
 }
 
 
@@ -19,8 +20,6 @@
             margin: 4px 0px;
             background-color: #6F85C3;
         }
-
-
     }
 
     #active {
