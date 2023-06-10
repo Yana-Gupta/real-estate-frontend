@@ -4,22 +4,12 @@ This is a frontend of a real estate website with a good User Interface. The desi
 
 ## How to run the project on your local server
 
-1. Download the project code.
+1. Fork the repository
 
-```
-https://real-estate-frontend-lemon.vercel.app/
-```
+2. Clone the repository (`git clone`)
 
-2. Install all the dependencies
+3. Install all the dependencies (`npm install`)
 
-```
-npm install
-```
-
-3. Start command from create-react-app
-
-```
-npm run start
-```
+4. Run start command (`npm run start`)
 
 The application will start live on your local sever.
