@@ -1,6 +1,10 @@
 version: 2
 updates:
-  - package-ecosystem: "javascript" 
-    directory: "/" 
+  - package-ecosystem: "javascript"
+    directory: "/"
     schedule:
-      interval: "weekly" 
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    allow:
+      - dependency-type: "all"
+        update-types: ["version"]
