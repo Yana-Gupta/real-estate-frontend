@@ -21,7 +21,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
-    "sass": "^1.56.1",
+    "sass": "^1.68.0",
     "scss": "^0.2.4",
     "tss-react": "^4.9.2",
     "web-vitals": "^2.1.4"
