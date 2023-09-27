@@ -24,76 +24,53 @@
     flex-direction: column;
     justify-content: center;
     color: bisque;
-    align-items: flex-start;
+    align-items: center;
     background-color: black;
     z-index: inherit;
+}
 
-    h1 {
-        background-color: #0C2032;
-        margin-right: 100px;
-        padding-right: 50px;
-        padding-left: 40px;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-top-right-radius: 100px;
-        border-bottom-right-radius: 100px;
-        margin-bottom: 4px;
-        opacity: .92;
-    }
 
-    h2 {
-        margin-top: 4px;
-        background-color: #0C2032;
-        padding-left: 40px;
-        padding-right: 50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-top-right-radius: 40px;
-        border-bottom-right-radius: 40px;
-        opacity: .9;
-    }
+.homebox {
+    width: 703px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+    width: 60%;
 }
 
 @media (max-width: 1200px) {
-    .home {
-        h1 {
-            font-size: 26px;
-        }
+    .homebox {
+        width: 60%;
     }
 }
 
-@media (max-width: 700px) {
-    .home {
-        h1{
-            font-size: 24px;
-            padding-right: 30px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
+@media (max-width: 1000px) {
+    .homebox {
+        width: 64%;
     }
 }
 
-@media (max-width: 550px) {
-    .home {
-        h1{
-            margin-right: 10px;
-        }
+@media (max-width: 830px) {
+    .homebox {
+        width: 68%;
     }
 }
 
-@media (max-width: 450px) {
-    .home {
-        h1{
-            margin-right: 4px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border-top-right-radius: 100px;
-            border-bottom-right-radius: 100px;
-            font-size: 18px;
-        }
-        h2{
-            margin-right: 20px;
-            font-size: 18px;
-        }
+@media (max-width: 456px) {
+    .homebox {
+        width: 80%;
+    }
+}
+
+@media (max-width: 356px) {
+    .homebox {
+        width: 90%;
+    }
+}
+
+@media (max-width: 320px) {
+    .homebox {
+        width: 94%;
     }
 }
