@@ -23,7 +23,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.56.1",
     "scss": "^0.2.4",
-    "tss-react": "^4.4.5",
+    "tss-react": "^4.9.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
