@@ -16,7 +16,6 @@ import LocationCityIcon from "@mui/icons-material/LocationCity";
 import Client from "./Clients/Index";
 import "./Index.scss";
 import { useState } from "react";
-import backgroundImage from "../../assets/image/background.jpg";
 
 const propertyOptions = [
   {
@@ -57,7 +56,8 @@ function Home() {
 
   return (
     <div className="hm-pg">
-      <img loading="lazy" src={backgroundImage} alt="background" />
+      {/* <img src={backgroundImage} alt="background" /> */}
+      <img src="/assets/image/background.webp" alt="bg" />
       <div className="home">
         <Box className="homebox">
           <Box
