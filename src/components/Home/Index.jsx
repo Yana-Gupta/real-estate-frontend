@@ -1,4 +1,5 @@
-import { Box } from "@mui/system";
+import React from 'react';
+import { Box } from '@mui/system';
 import {
   MenuItem,
   TextField,
@@ -7,47 +8,47 @@ import {
   Typography,
   ButtonGroup,
   useMediaQuery,
-} from "@mui/material";
-import { SearchRounded } from "@mui/icons-material";
-import BorderAllIcon from "@mui/icons-material/BorderAll";
-import HouseIcon from "@mui/icons-material/House";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import LocationCityIcon from "@mui/icons-material/LocationCity";
-import Client from "./Clients/Index";
-import "./Index.scss";
-import { useState } from "react";
+} from '@mui/material';
+import { SearchRounded } from '@mui/icons-material';
+import BorderAllIcon from '@mui/icons-material/BorderAll';
+import HouseIcon from '@mui/icons-material/House';
+import ApartmentIcon from '@mui/icons-material/Apartment';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import Client from './Clients/Index';
+import './Index.scss';
+import { useState } from 'react';
 
 const propertyOptions = [
   {
-    type: "All Residentials",
-    icon: <BorderAllIcon style={{ color: "#443D66" }} />,
+    type: 'All Residentials',
+    icon: <BorderAllIcon style={{ color: '#443D66' }} />,
   },
   {
-    type: "Home",
-    icon: <HouseIcon style={{ color: "#443D66" }} />,
+    type: 'Home',
+    icon: <HouseIcon style={{ color: '#443D66' }} />,
   },
   {
-    type: "Apartment",
-    icon: <ApartmentIcon style={{ color: "#443D66" }} />,
+    type: 'Apartment',
+    icon: <ApartmentIcon style={{ color: '#443D66' }} />,
   },
   {
-    type: "Building",
-    icon: <LocationCityIcon style={{ color: "#443D66" }} />,
+    type: 'Building',
+    icon: <LocationCityIcon style={{ color: '#443D66' }} />,
   },
 ];
 const userInterest = [
-  { type: "buy" },
-  { type: "sell" },
-  { type: "rent" },
-  { type: "pg" },
+  { type: 'buy' },
+  { type: 'sell' },
+  { type: 'rent' },
+  { type: 'pg' },
 ];
 
 function Home() {
-  const showUP780 = useMediaQuery("(min-Width: 780px)");
-  const showDown780px = useMediaQuery("(max-width: 780px)");
+  const showUP780 = useMediaQuery('(min-width: 780px)');  // Corrected the typo in "min-width"
+  const showDown780px = useMediaQuery('(max-width: 780px)');
 
-  const optionArea = "40";
-  const [option, setOption] = useState("All Residentials");
+  const optionArea = 40; // Changed to a numeric value
+  const [option, setOption] = useState('All Residentials');
 
   async function handleChange(event) {
     setOption(event.target.value);
@@ -60,38 +61,35 @@ function Home() {
         <Box className="homebox">
           <Box
             sx={{
-              display: "flex",
+              display: 'flex',
             }}
           >
             <ButtonGroup fullWidth>
-              {{ userInterest } &&
-                userInterest.map((item) => {
-                  return (
-                    <Button
-                      key={item.type}
-                      id={item.type}
-                      color="inherit"
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#313f82",
-                        borderTopRightRadius: "20px",
-                        borderBottomLeftRadius: "0px",
-                        borderBottomRightRadius: "0px",
-                        borderTopLeftRadius: "20px",
-                        color: "#CED0C8",
-                      }}
-                    >
-                      {item.type}
-                    </Button>
-                  );
-                })}
+              {userInterest.map((item) => (
+                <Button
+                  key={item.type}
+                  id={item.type}
+                  color="inherit"
+                  variant="contained"
+                  sx={{
+                    backgroundColor: '#313f82',
+                    borderTopRightRadius: '20px',
+                    borderBottomLeftRadius: '0px',
+                    borderBottomRightRadius: '0px',
+                    borderTopLeftRadius: '20px',
+                    color: '#CED0C8',
+                  }}
+                >
+                  {item.type}
+                </Button>
+              ))}
             </ButtonGroup>
           </Box>
           <Box
             sx={{
-              width: "100%",
-              display: "flex",
-              height: "56px",
+              width: '100%',
+              display: 'flex',
+              height: '56px',
             }}
           >
             <TextField
@@ -100,44 +98,44 @@ function Home() {
               onChange={handleChange}
               sx={{
                 width: `${optionArea}%`,
-                outline: "none",
-                height: "56px",
-                padding: "auto",
-                backgroundColor: "#ffff",
-                borderBottomLeftRadius: "20px",
+                outline: 'none',
+                height: '56px',
+                padding: 'auto',
+                backgroundColor: '#ffff',
+                borderBottomLeftRadius: '20px',
               }}
             >
-              {{ propertyOptions } &&
-                propertyOptions.map((option) => {
-                  return (
-                    <MenuItem key={option.type} value={option.type}>
-                      {showUP780 && <Typography>{option.type}</Typography>}
-                      {showDown780px && <Typography>{option.icon}</Typography>}
-                    </MenuItem>
-                  );
-                })}
+              {propertyOptions.map((option) => (
+                <MenuItem key={option.type} value={option.type}>
+                  {showUP780 ? (
+                    <Typography>{option.type}</Typography>
+                  ) : (
+                    <Typography>{option.icon}</Typography>
+                  )}
+                </MenuItem>
+              ))}
             </TextField>
             <TextField
               variant="filled"
               label={<SearchRounded />}
               sx={{
-                alignContent: "start",
-                height: "56px",
-                backgroundColor: "#ffff",
+                alignContent: 'start',
+                height: '56px',
+                backgroundColor: '#ffff',
               }}
               fullWidth
             />
             <Button
               variant="contained"
               sx={{
-                borderBottomRightRadius: "20px",
-                borderTopLeftRadius: "0px",
-                borderBottomLeftRadius: "0px",
-                width: "14%",
-                border: "none",
-                margin: "0px",
-                padding: "auto 10px",
-                borderTopRightRadius: "0px",
+                borderBottomRightRadius: '20px',
+                borderTopLeftRadius: '0px',
+                borderBottomLeftRadius: '0px',
+                width: '14%',
+                border: 'none',
+                margin: '0px',
+                padding: 'auto 10px',
+                borderTopRightRadius: '0px',
               }}
             >
               Search
