@@ -12,7 +12,7 @@ This is a frontend of a real estate website with a good User Interface. The desi
 
 4. Run start command (`npm run start`)
 
-The application will start live on your local sever.
+The application will start live on your local server.
 
 
 ## Contributing
