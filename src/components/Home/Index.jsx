@@ -1,3 +1,4 @@
+import React from "react";
 import { Box } from "@mui/system";
 import {
   MenuItem,
@@ -43,10 +44,9 @@ const userInterest = [
 ];
 
 function Home() {
-  const showUP780 = useMediaQuery("(min-Width: 780px)");
-  const showDown780px = useMediaQuery("(max-width: 780px)");
-
-  const optionArea = "40";
+  const showUP780 = useMediaQuery("(min-width: 780px)");  // Corrected the typo in "min-width"
+  
+  const optionArea = 40; // Changed to a numeric value
   const [option, setOption] = useState("All Residentials");
 
   async function handleChange(event) {
@@ -66,27 +66,24 @@ function Home() {
             }}
           >
             <ButtonGroup fullWidth>
-              {{ userInterest } &&
-                userInterest.map((item) => {
-                  return (
-                    <Button
-                      key={item.type}
-                      id={item.type}
-                      color="inherit"
-                      variant="contained"
-                      sx={{
-                        backgroundColor: "#313f82",
-                        borderTopRightRadius: "20px",
-                        borderBottomLeftRadius: "0px",
-                        borderBottomRightRadius: "0px",
-                        borderTopLeftRadius: "20px",
-                        color: "#CED0C8",
-                      }}
-                    >
-                      {item.type}
-                    </Button>
-                  );
-                })}
+              {userInterest.map((item) => (
+                <Button
+                  key={item.type}
+                  id={item.type}
+                  color="inherit"
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#313f82",
+                    borderTopRightRadius: "20px",
+                    borderBottomLeftRadius: "0px",
+                    borderBottomRightRadius: "0px",
+                    borderTopLeftRadius: "20px",
+                    color: "#CED0C8",
+                  }}
+                >
+                  {item.type}
+                </Button>
+              ))}
             </ButtonGroup>
           </Box>
           <Box
@@ -109,15 +106,15 @@ function Home() {
                 borderBottomLeftRadius: "20px",
               }}
             >
-              {{ propertyOptions } &&
-                propertyOptions.map((option) => {
-                  return (
-                    <MenuItem key={option.type} value={option.type}>
-                      {showUP780 && <Typography>{option.type}</Typography>}
-                      {showDown780px && <Typography>{option.icon}</Typography>}
-                    </MenuItem>
-                  );
-                })}
+              {propertyOptions.map((option) => (
+                <MenuItem key={option.type} value={option.type}>
+                  {showUP780 ? (
+                    <Typography>{option.type}</Typography>
+                  ) : (
+                    <Typography>{option.icon}</Typography>
+                  )}
+                </MenuItem>
+              ))}
             </TextField>
             <TextField
               variant="filled"
