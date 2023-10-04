@@ -56,6 +56,8 @@ function Home() {
 
   return (
     <div className="hm-pg">
+      {/* <img src={backgroundImage} alt="background" /> */}
+      <img src="/assets/image/background.webp" alt="bg" className="hm-img" />
       <div className="home">
         <Box className="homebox">
           <Box
