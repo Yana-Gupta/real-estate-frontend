@@ -45,7 +45,7 @@ const userInterest = [
 
 function Home() {
   const showUP780 = useMediaQuery('(min-width: 780px)');  // Corrected the typo in "min-width"
-  const showDown780px = useMediaQuery('(max-width: 780px)');
+  
 
   const optionArea = 40; // Changed to a numeric value
   const [option, setOption] = useState('All Residentials');
