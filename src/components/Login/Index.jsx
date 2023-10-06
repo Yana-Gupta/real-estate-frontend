@@ -86,7 +86,7 @@ export default function Login() {
                                     </Grid>
 
                                     <Grid xxs={12} xs={12} sm={12} item >
-                                        <Link underline="none" href="/signin">
+                                        <Link underline="none" href="/signUp">
                                             <Typography variant="span" fontSize={'.82rem'}>
                                                 New? Let's SignUp.
                                             </Typography>
