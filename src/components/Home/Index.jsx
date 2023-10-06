@@ -80,6 +80,9 @@ function Home() {
                     borderBottomRightRadius: "0px",
                     borderTopLeftRadius: "20px",
                     color: "#CED0C8",
+                    ':hover':{
+                      bgcolor : '#202853',                      
+                    }
                   }}
                 >
                   {item.type}
