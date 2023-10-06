@@ -70,6 +70,7 @@ function Home() {
                 <Button
                   key={item.type}
                   id={item.type}
+                  className = "btn"
                   color="inherit"
                   variant="contained"
                   sx={{

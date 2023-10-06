@@ -45,6 +45,12 @@
     position: relative;
     margin: auto;
   }
+
+  .btn:hover {
+    background-color: black;
+    transition: 0.7s;
+
+  }
   
   /* Responsive Design */
   @media (max-width: 1200px) {
