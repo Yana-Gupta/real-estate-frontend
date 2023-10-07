@@ -109,7 +109,7 @@ export default function SignIn() {
                 </Grid>
                 <Grid xxs={12} xs={7} sm={7} item>
                   <TextField
-                    variant="standard"
+                    variant="filled"
                     type={"email"}
                     label="Email"
                     required
@@ -118,7 +118,7 @@ export default function SignIn() {
                 </Grid>
                 <Grid xxs={12} xs={5} sm={5} item>
                   <TextField
-                    variant="outlined"
+                    variant="filled"
                     type={"tel"}
                     label="Phone Number"
                     required
@@ -150,6 +150,7 @@ export default function SignIn() {
                 <Grid xxs={12} xs={12} sm={6} md={6} item>
                   <TextField
                     type={"password"}
+                    variant="filled"
                     label="Create a password"
                     fullWidth
                   />
@@ -157,6 +158,7 @@ export default function SignIn() {
                 <Grid xxs={12} xs={12} sm={6} md={6} item>
                   <TextField
                     type={"password"}
+                    variant="filled"
                     label="Re-Enter password"
                     fullWidth
                   />
@@ -169,7 +171,7 @@ export default function SignIn() {
                       position: "relative",
                     }}
                   >
-                    <Typography fontSize={".81rem"} variant="span">
+                    <Typography fontSize={".81rem"} variant="span" color={"black"}>
                       Already a User? Login.
                     </Typography>
                   </Link>
@@ -182,7 +184,7 @@ export default function SignIn() {
                   item
                   alignItems={"center"}
                 >
-                  <Button type="submit" variant="contained">
+                  <Button type="submit" variant="contained" className="btn">
                     Submit
                   </Button>
                 </Grid>

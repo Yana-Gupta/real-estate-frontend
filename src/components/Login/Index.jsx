@@ -75,7 +75,7 @@ export default function Login() {
                                 <Grid spacing={3} container>
 
                                     <Grid xxs={12} margin='auto' item>
-                                        <TextField variant="standard" type={'email'} label='Email' required fullWidth/>
+                                        <TextField variant="outlined" type={'email'} label='Email' required fullWidth />
                                     </Grid>
                                     <Grid xxs={12} margin='auto' item>
                                         <TextField variant="outlined" type={'tel'} label="Phone Number" required fullWidth />
@@ -87,14 +87,14 @@ export default function Login() {
 
                                     <Grid xxs={12} xs={12} sm={12} item >
                                         <Link underline="none" href="/signUp">
-                                            <Typography variant="span" fontSize={'.82rem'}>
+                                            <Typography variant="span" fontSize={'.87rem'} color={"black"}>
                                                 New? Let's SignUp.
                                             </Typography>
                                         </Link>
                                     </Grid>
 
                                     <Grid xxs={12} xs={12} sm={12} item >
-                                        <Button variant="contained" type="submit">Submit</Button>
+                                        <Button variant="contained" type="submit" className="btn">Submit</Button>
                                     </Grid>
                                 </Grid>
                             </form>
