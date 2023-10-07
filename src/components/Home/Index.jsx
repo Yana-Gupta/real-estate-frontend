@@ -80,7 +80,7 @@ function Home() {
                     borderTopLeftRadius: "20px",
                     color: "#CED0C8",
                     ':hover':{
-                      bgcolor : '#202853',                      
+                      bgcolor : '#5A659B',                      
                     }
                   }}
                 >
