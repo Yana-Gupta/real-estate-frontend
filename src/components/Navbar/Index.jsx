@@ -37,6 +37,7 @@ export default function Navbar() {
             padding: "0px 20px",
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
             fontSize: "24px",
           }}
           className={navbarOpen ? "nav-bar-container" : ""}
@@ -149,7 +150,7 @@ export default function Navbar() {
           )}
 
           {showDownMd && (
-            <Box width={"70%"}>
+            <Box height={"69px"} display={"flex"}>
               <Button
                 color="inherit"
                 className="nav-open-btn"
@@ -181,10 +182,11 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#D1D4DB",
-                    height: "80px",
-                    borderRadius: "0px",
+                    borderRadius: "50px",
                     color: "#12172B",
                     textTransform: "none",
+                    marginRight: "10px",
+                    padding: "10px 20px"
                   }}
                   className="btn-reg"
                   variant="contained"
@@ -198,10 +200,10 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#4358B1",
-                    height: "80px",
-                    borderRadius: "0px",
+                    borderRadius: "50px",
                     color: "#fff",
                     textTransform: "none",
+                    padding: "10px 20px"
                   }}
                   className="btn-reg"
                   variant="contained"
