@@ -28,7 +28,7 @@ export default function Navbar() {
           backgroundColor: "#222B59",
           padding: "0px 20px",
         }}
-        className={navbarOpen ? "nav-bar-open" : "" }
+        className={navbarOpen ? "nav-bar-open" : ""}
       >
         <Container
           maxWidth="xl"
@@ -186,7 +186,7 @@ export default function Navbar() {
                     color: "#12172B",
                     textTransform: "none",
                     marginRight: "10px",
-                    padding: "10px 20px"
+                    padding: "15px 25px",
                   }}
                   className="btn-reg"
                   variant="contained"
@@ -203,7 +203,7 @@ export default function Navbar() {
                     borderRadius: "50px",
                     color: "#fff",
                     textTransform: "none",
-                    padding: "10px 20px"
+                    padding: "15px 25px",
                   }}
                   className="btn-reg"
                   variant="contained"
