@@ -79,7 +79,7 @@ export default function Navbar() {
               <Link
                 href="/"
                 underline="none"
-                className={navbarOpen ? "toolbar-btn" : ""}
+                className={navbarOpen ? "toolbar-btn hover" : "hover"}
               >
                 <Button
                   color="inherit"
@@ -97,7 +97,7 @@ export default function Navbar() {
               <Link
                 href="/property"
                 underline="none"
-                className={navbarOpen ? "toolbar-btn" : ""}
+                className={navbarOpen ? "toolbar-btn hover" : "hover"}
               >
                 <Button
                   color="inherit"
@@ -115,7 +115,7 @@ export default function Navbar() {
               <Link
                 href="/agent"
                 underline="none"
-                className={navbarOpen ? "toolbar-btn" : ""}
+                className={navbarOpen ? "toolbar-btn hover" : "hover"}
               >
                 <Button
                   color="inherit"
@@ -133,7 +133,7 @@ export default function Navbar() {
               <Link
                 href="/about"
                 underline="none"
-                className={navbarOpen ? "toolbar-btn" : ""}
+                className={navbarOpen ? "toolbar-btn hover" : "hover"}
               >
                 <Button
                   variant="text"

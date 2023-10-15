@@ -13,6 +13,10 @@
     opacity: 0.8;
 }
 
+.hover Button:hover {
+    background-color: #6F85C3;
+}
+
 @media (max-width: 960px) {
     .nav-open-btn {
         background: yellow;
@@ -47,7 +51,7 @@
     }
 
     .nav-bar-open {
-        height: 100vh;
+        height: 50vh;
         overflow: hidden;
     }
 
