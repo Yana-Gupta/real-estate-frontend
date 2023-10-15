@@ -182,11 +182,10 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#D1D4DB",
+                    height: "80px",
                     color: "#12172B",
                     borderRadius: "0px",
                     textTransform: "none",
-                    padding: "15px 25px",
-                    margin: "12px 0px"
                   }}
                   className="btn-reg"
                   variant="contained"
@@ -200,11 +199,10 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#4358B1",
+                    height: "80px",
                     color: "#fff",
                     borderRadius: "0px",
                     textTransform: "none",
-                    padding: "15px 25px",
-                    margin: "12px 0px"
                   }}
                   className="btn-reg"
                   variant="contained"
