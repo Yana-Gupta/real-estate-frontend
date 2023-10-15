@@ -14,8 +14,8 @@ import "./Index.scss";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  const showUpMd = useMediaQuery("(min-width: 701px)");
-  const showDownMd = useMediaQuery("(max-width: 700px)");
+  const showUpMd = useMediaQuery("(min-width: 961px)");
+  const showDownMd = useMediaQuery("(max-width: 960px)");
 
   async function handleClick() {
     await setNavbarOpen(!navbarOpen);
@@ -182,11 +182,11 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#D1D4DB",
-                    borderRadius: "50px",
                     color: "#12172B",
+                    borderRadius: "0px",
                     textTransform: "none",
-                    marginRight: "10px",
                     padding: "15px 25px",
+                    margin: "12px 0px"
                   }}
                   className="btn-reg"
                   variant="contained"
@@ -200,10 +200,11 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#4358B1",
-                    borderRadius: "50px",
                     color: "#fff",
+                    borderRadius: "0px",
                     textTransform: "none",
                     padding: "15px 25px",
+                    margin: "12px 0px"
                   }}
                   className="btn-reg"
                   variant="contained"
