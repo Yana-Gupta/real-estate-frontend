@@ -14,8 +14,8 @@ import "./Index.scss";
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  const showUpMd = useMediaQuery("(min-width: 701px)");
-  const showDownMd = useMediaQuery("(max-width: 700px)");
+  const showUpMd = useMediaQuery("(min-width: 961px)");
+  const showDownMd = useMediaQuery("(max-width: 960px)");
 
   async function handleClick() {
     await setNavbarOpen(!navbarOpen);
@@ -28,7 +28,7 @@ export default function Navbar() {
           backgroundColor: "#222B59",
           padding: "0px 20px",
         }}
-        className={navbarOpen ? "nav-bar-open" : "" }
+        className={navbarOpen ? "nav-bar-open" : ""}
       >
         <Container
           maxWidth="xl"
@@ -37,6 +37,7 @@ export default function Navbar() {
             padding: "0px 20px",
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
             fontSize: "24px",
           }}
           className={navbarOpen ? "nav-bar-container" : ""}
@@ -149,7 +150,7 @@ export default function Navbar() {
           )}
 
           {showDownMd && (
-            <Box width={"70%"}>
+            <Box height={"69px"} display={"flex"}>
               <Button
                 color="inherit"
                 className="nav-open-btn"
@@ -182,8 +183,8 @@ export default function Navbar() {
                   style={{
                     backgroundColor: "#D1D4DB",
                     height: "80px",
-                    borderRadius: "0px",
                     color: "#12172B",
+                    borderRadius: "0px",
                     textTransform: "none",
                   }}
                   className="btn-reg"
@@ -199,8 +200,8 @@ export default function Navbar() {
                   style={{
                     backgroundColor: "#4358B1",
                     height: "80px",
-                    borderRadius: "0px",
                     color: "#fff",
+                    borderRadius: "0px",
                     textTransform: "none",
                   }}
                   className="btn-reg"
