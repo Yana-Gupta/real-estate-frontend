@@ -1,196 +1,135 @@
-import {
-  Paper,
-  Typography,
-  CssBaseline,
-  TextField,
-  Grid,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-  FormLabel,
-  Radio,
-  Button,
-  Link,
-} from "@mui/material";
-import { Box } from "@mui/system";
-import { makeStyles } from "tss-react/mui";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "./Index.scss";
+import React, {useState} from "react";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-}));
+export default function SignUp() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+  };
 
-export default function SignIn() {
-  const theme = createTheme({
-    breakpoints: {
-      values: {
-        xxs: 0,
-        xs: 560,
-        sm: 800,
-        md: 900,
-        lg: 1200,
-        xl: 1536,
-      },
-    },
-  });
+  const [showPassword, setShowPassword] = useState(false);
 
-  const classes = useStyles();
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
 
   return (
-    <div className={classes.root} id="root">
-      <CssBaseline />
-      <ThemeProvider theme={theme}>
-        <Box
-          sx={{
-            marginTop: 3,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-          maxWidth="md"
-        >
-          <Paper elevation={4}>
-            <Typography
-              component="h1"
-              variant="h5"
-              sx={{
-                padding: "10px 60px",
-              }}
-            >
-              SignIn
-            </Typography>
-          </Paper>
-          <Box
-            sx={{
-              mt: 2,
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "0px 50px",
-            }}
-          >
-            <form action="" method="get">
-              <Grid spacing={2} container>
-                <Grid xxs={12} xs={12} sm={4} md={4} item>
-                  <TextField
-                    type={"text"}
-                    variant="filled"
-                    label="First Name"
+    <Container component="main" maxWidth="sm">
+      <Box
+        sx={{
+          boxShadow: 3,
+          borderRadius: 2,
+          px: 4,
+          py: 6,
+          marginTop: 8,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Typography component="h1" variant="h5" fontWeight="600" fontSize="45px" color="#222B59">
+          Real-Estate
+        </Typography>
+        <Typography component="h1" variant="h5" color="#222B59">
+          Sign Up
+        </Typography>
+        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <form action="/" method="get">
+                <TextField
+                    margin="normal"
                     required
                     fullWidth
-                  />
-                </Grid>
-                <Grid xxs={12} xs={4} sm={4} md={4} item>
-                  <TextField
-                    type={"text"}
-                    variant="filled"
-                    label="Middle Name"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid xxs={12} xs={8} sm={4} md={4} item>
-                  <TextField
-                    type={"text"}
-                    variant="filled"
-                    label="Last Name"
+                    type="text"
+                    id="name"
+                    label="Name"
+                    name="name"
+                    autoComplete="name"
+                    autoFocus
+                />
+                <TextField
+                    margin="normal"
                     required
                     fullWidth
+                    type="email"
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                />
+                <FormControl sx={{m:"16px 0 8px 0",width: "100%" }} variant="outlined" required>
+                  <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                  <OutlinedInput
+                    id="outlined-adornment-password"
+                    type={showPassword ? 'text' : 'password'}
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          edge="end"
+                        >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                    label="Password"
                   />
-                </Grid>
-                <Grid xxs={12} xs={7} sm={7} item>
-                  <TextField
-                    variant="standard"
-                    type={"email"}
-                    label="Email"
+                </FormControl>
+                {/* <TextField
+                    margin="normal"
                     required
                     fullWidth
-                  />
-                </Grid>
-                <Grid xxs={12} xs={5} sm={5} item>
-                  <TextField
-                    variant="outlined"
-                    type={"tel"}
-                    label="Phone Number"
-                    required
+                    name="confirm-password"
+                    label="Confirm Password"
+                    type="password"
+                    id="confirm-password"
+                    autoComplete="confirm-password"
+                /> */}
+                {/* <FormControlLabel
+                    control={<Checkbox value="remember" color="primary" />}
+                    label="Remember me"
+                /> */}
+                <Button
+                    type="submit"
                     fullWidth
-                  />
-                </Grid>
-                <Grid xxs={12} xs={12} sm={12} md={12} item>
-                  <FormControl>
-                    <FormLabel>Gender</FormLabel>
-                    <RadioGroup row>
-                      <FormControlLabel
-                        value="male"
-                        label="Male"
-                        control={<Radio />}
-                      />
-                      <FormControlLabel
-                        value="female"
-                        label="Female"
-                        control={<Radio />}
-                      />
-                      <FormControlLabel
-                        value="other"
-                        label="Other"
-                        control={<Radio />}
-                      />
-                    </RadioGroup>
-                  </FormControl>
-                </Grid>
-                <Grid xxs={12} xs={12} sm={6} md={6} item>
-                  <TextField
-                    type={"password"}
-                    label="Create a password"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid xxs={12} xs={12} sm={6} md={6} item>
-                  <TextField
-                    type={"password"}
-                    label="Re-Enter password"
-                    fullWidth
-                  />
-                </Grid>
-                <Grid xxs={12} xs={12} sm={12} md={12} item>
-                  <Link
-                    href="/login"
-                    underline="none"
-                    sx={{
-                      position: "relative",
-                    }}
-                  >
-                    <Typography fontSize={".81rem"} variant="span">
-                      Already a User? Login.
-                    </Typography>
-                  </Link>
-                </Grid>
-                <Grid
-                  xxs={12}
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  item
-                  alignItems={"center"}
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2, background:"#222B59"}}
                 >
-                  <Button type="submit" variant="contained">
-                    Submit
-                  </Button>
-                </Grid>
-              </Grid>
+                    Sign Up
+                </Button>
             </form>
-          </Box>
+          <Grid container>
+            <Grid item xs>
+              <Link href="/login" variant="body2" sx={{ color:"#222B59"}} underline="hover">
+                  Already a User? Login.
+              </Link>
+            </Grid>
+            {/* <Grid item>
+              <Link href="/signUp" variant="body2">
+                {"Don't have an account? Sign Up"}
+              </Link>
+            </Grid> */}
+          </Grid>
         </Box>
-      </ThemeProvider>
-    </div>
+      </Box>
+    </Container>
   );
 }
