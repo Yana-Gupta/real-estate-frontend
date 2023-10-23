@@ -1,4 +1,35 @@
+/* App.scss */
+
+/* General styles for the body */
 body {
-    background-color: #E5EAF0;
-    overflow-x: hidden;
+  background-color: #F5F7FA; /* Example background color */
+  font-family: 'YourChosenFont', sans-serif;
+  font-size: 16px;
+  color: #333; /* Example text color */
+  overflow-x: hidden;
+}
+
+/* Styles for the hamburger menu button */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  /* Add hamburger icon styling (e.g., three horizontal lines) */
+}
+
+/* Apply styles to the menu when it's open */
+.menu-open {
+  /* Add styles to display the menu content */
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+}
+
+/* Apply styles to the menu when it's closed */
+.menu-closed {
+  transform: translateX(-100%);
+}
+
+/* Add transitions for smoother animation */
+.menu-content {
+  transition: transform 0.3s ease-in-out;
+  /* Other menu content styles */
 }
