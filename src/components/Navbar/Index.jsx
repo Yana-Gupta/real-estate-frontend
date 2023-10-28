@@ -182,9 +182,12 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#D1D4DB",
-                    height: "80px",
+                    height: "43px",
+                    width:"120px",
                     color: "#12172B",
-                    borderRadius: "0px",
+                    margin: "23px 15px",
+                    fontSize: "20px",
+                    borderRadius: "20px",
                     textTransform: "none",
                   }}
                   className="btn-reg"
@@ -199,9 +202,12 @@ export default function Navbar() {
                 <Button
                   style={{
                     backgroundColor: "#4358B1",
-                    height: "80px",
+                    height: "43px",
+                    width:"120px",
                     color: "#fff",
-                    borderRadius: "0px",
+                    margin: "23px 15px",
+                    fontSize: "20px",
+                    borderRadius: "20px",
                     textTransform: "none",
                   }}
                   className="btn-reg"
