@@ -183,12 +183,13 @@ export default function Navbar() {
                   style={{
                     backgroundColor: "#D1D4DB",
                     height: "43px",
-                    width:"120px",
-                    color: "#12172B",
+                    width:"130px",
+                    color: "#fff",
                     margin: "23px 15px",
                     fontSize: "20px",
-                    borderRadius: "20px",
+                    borderRadius: "5px",
                     textTransform: "none",
+                    background: 'linear-gradient(to bottom,#43CBFF, #9708CC)',
                   }}
                   className="btn-reg"
                   variant="contained"
@@ -203,12 +204,13 @@ export default function Navbar() {
                   style={{
                     backgroundColor: "#4358B1",
                     height: "43px",
-                    width:"120px",
+                    width:"130px",
                     color: "#fff",
                     margin: "23px 15px",
                     fontSize: "20px",
-                    borderRadius: "20px",
+                    borderRadius: "5px",
                     textTransform: "none",
+                    background: 'linear-gradient(to bottom,#43CBFF, #9708CC)',
                   }}
                   className="btn-reg"
                   variant="contained"
