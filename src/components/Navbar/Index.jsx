@@ -189,7 +189,7 @@ export default function Navbar() {
                     fontSize: "20px",
                     borderRadius: "5px",
                     textTransform: "none",
-                    background: 'linear-gradient(to bottom,#43CBFF, #9708CC)',
+                    background: 'linear-gradient(to bottom, #6f85c3 30%, #1976d2 100%)',
                   }}
                   className="btn-reg"
                   variant="contained"
@@ -210,7 +210,7 @@ export default function Navbar() {
                     fontSize: "20px",
                     borderRadius: "5px",
                     textTransform: "none",
-                    background: 'linear-gradient(to bottom,#43CBFF, #9708CC)',
+                    background: 'linear-gradient(to bottom, #6f85c3 30%, #1976d2 100%)',
                   }}
                   className="btn-reg"
                   variant="contained"
