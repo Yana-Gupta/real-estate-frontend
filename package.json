@@ -11,7 +11,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.10.16",
-    "@mui/joy": "^5.0.0-alpha.78",
+    "@mui/joy": "^5.0.0-beta.15",
     "@mui/material": "^5.10.13",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
